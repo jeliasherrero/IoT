@@ -1,0 +1,50 @@
+{
+  "pi": {
+    "name": "WoT Pi",
+    "description": "A simple WoT-connected Raspberry PI for the WoT book.",
+    "port": 8484,
+    "sensors": {
+      "temperature": {
+        "name": "Temperature Sensor",
+        "description": "An ambient temperature sensor.",
+        "unit": "celsius",
+        "value": 0,
+        "gpio": 4
+      },
+      "humidity": {
+        "name": "Humidity Sensor",
+        "description": "An ambient humidity sensor.",
+        "unit": "%",
+        "value": 0,
+        "gpio": 4
+      },
+      "pir": {
+        "name": "Passive Infrared",
+        "description": "A passive infrared sensor. When 'true' someone is present.",
+        "value": true,
+        "gpio": 23
+      },
+      "camera": {
+        "name": "Camara de vigilancia",
+        "description": "PiCamera conectada en el sistema domotico",
+	"value": "image.jpg"
+      }
+    },
+    "actuators": {
+      "leds": {
+        "1": {
+          "name": "LED 1",
+          "value": false,
+          "gpio":18
+        }
+      },
+      "display": {
+          "name": "LCD20x4",
+	  "cursorX": 0,
+	  "cursorY": 0,
+          "value": "Welcome",
+	  "onOff": "true"
+      }
+    }
+  }
+}
