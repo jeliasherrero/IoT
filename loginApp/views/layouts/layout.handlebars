@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LoginApp</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">LoginApp</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  {{#if user}}
+                  <li class="active"><a href="/">Dashboard</a></li>
+                  <li><a href="/users/logout">Salir</a></li>
+                  {{else}}
+                  <li><a href="/users/login">Login</a></li>
+                  <li><a href="/users/register">Registrarse</a></li>
+                  {{/if}}
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Automatiza tu hogar (Plug & Play)</h1>
+            {{#if success_msg}}
+            	<div class="alert alert-success">{{success_msg}}</div>
+            {{/if}}
+
+            {{#if error_msg}}
+            	<div class="alert alert-danger">{{error_msg}}</div>
+            {{/if}}
+
+            {{#if error}}
+            	<div class="alert alert-danger">{{error}}</div>
+            {{/if}}
+
+            {{{body}}}
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>LoginApp for DomoticUZ <a href="http://www.unizar.es">Unizar</a>, 2016.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+</body>
+</html>
