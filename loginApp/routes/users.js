@@ -2,8 +2,46 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+//var Client = require('node-rest-client').Client;
+var request = require('request');
 
 var User = require('../models/user');
+
+router.get('/admin', function(req,res){
+
+	request({
+		url: "http://eliasherrero.es:4000/",
+	  method: "POST",
+	  json: {
+	    name: "Elias herrero",
+	    username: "jeliasherrero",
+	    authorization: "4wedfsd4534trefgdfgd"
+	  }
+	}, function(error, response, body){
+		if (error) {
+			console.log(error);
+		}
+		console.log(body);
+		res.render('index');
+	});
+	/*var client = new Client();
+	var args = {
+    data: { name: "Elias herrero",
+    				username: "jeliasherrero" },
+    headers: { "Content-Type": "application/json" }
+	};
+
+	client.post("http://eliasherrero.es:4000/", args, function(data,response){
+		//console.log(data.body);
+		//console.log(response);
+		if (Buffer.isBuffer(data)){
+			data = data.toString('utf8');
+		}
+		console.log(data);
+		console.log(data.message);
+		res.render('index');
+	});*/
+});
 
 router.get('/register', function(req, res){
 	res.render('register');
