@@ -5,6 +5,10 @@ router.get('/', ensureAuthenticated, function(req, res){
 	res.render('index');
 });
 
+router.get('/sistema', ensureAuthenticated, function(req, res){
+	res.render('sistema');
+});
+
 function ensureAuthenticated(req, res, next){
 	if (req.isAuthenticated()){
 		return next();

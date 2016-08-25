@@ -18,8 +18,9 @@
               <nav>
                 <ul class="nav masthead-nav">
                   {{#if user}}
-                  <li class="active"><a href="/">Dashboard</a></li>
-                  <li><a href="/users/logout">Salir</a></li>
+                  <li><a href="/">Introducción</a></li>
+                  <li><a href="/sistema">Tu sistema</a></li>
+                  <li><a href="/users/logout">Salir ({{user.name}})</a></li>
                   {{else}}
                   <li><a href="/users/login">Login</a></li>
                   <li><a href="/users/register">Registrarse</a></li>
