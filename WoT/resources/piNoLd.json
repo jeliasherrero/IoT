@@ -22,30 +22,13 @@
       "link": "/properties",
       "title": "List of Properties",
       "resources": {
-        "user": {
-          "name": " Thing Owner",
-          "description": "User registered or not in the system.",
-          "values": {
-            "register": {
-              "name": "Register",
-              "description": "Active registration",
-              "customFields": {
-                "active": false
-              }
-            }
-          },
-          "tags": [
-            "register",
-            "public"
-          ]
-        },
         "temperature": {
-          "name": "Temperature Sensor",
-          "description": "An ambient temperature sensor.",
+          "name": "Sensor de temperatura",
+          "description": "Sensor de temperatura ambiente.",
           "values": {
             "t": {
-              "name": "Temperature sensor",
-              "description": "The temperature in celsius",
+              "name": "Sensor de temperatura",
+              "description": "Temperatura en grados celsius",
               "unit": "celsius",
               "customFields": {
                 "gpio": 4
@@ -59,12 +42,12 @@
           ]
         },
         "humidity": {
-          "name": "Humidity Sensor",
-          "description": "An ambient humidity sensor.",
+          "name": "Sensor de Humedad",
+          "description": "Sensor de humedad ambiente.",
           "values": {
             "h": {
-              "name": "Humidity",
-              "description": "Percentage of Humidity",
+              "name": "Sensor de humedad",
+              "description": "Porcentaje de humedad",
               "unit": "%",
               "customFields": {
                 "gpio": 4
@@ -77,12 +60,12 @@
           ]
         },
         "pir": {
-          "name": "Passive Infrared",
-          "description": "A passive infrared sensor.",
+          "name": "Sensor infrarrojo de presencia",
+          "description": "Sensor infrarrojo de presencia",
           "values": {
             "presence": {
-              "name": "Presence",
-              "description": "Current sensor value (true=motion detected)",
+              "name": "Sensor de presencia",
+              "description": "Valor actual del sensor (true=movimiento detectado)",
               "type": "boolean",
               "customFields": {
                 "gpio": 23
@@ -95,17 +78,17 @@
           ]
         },
         "leds": {
-          "name": "LEDs",
-          "description": "The LEDs of this device.",
+          "name": "Iluminación",
+          "description": "Iluminación de la casa.",
           "values": {
             "1": {
-              "name": "LED 1",
+              "name": "Iluminación 1",
               "customFields": {
                 "gpio": 18
               }
             },
             "2": {
-              "name": "LED 2",
+              "name": "Iluminación 2",
               "customFields": {
                 "gpio": 9
               }

@@ -68,6 +68,7 @@ function createPropertiesRoutes(model) {
     req.type = 'properties';
     req.entityId = 'properties';
 
+    //console.log(properties.resources);
     req.result = utils.modelToResources(properties.resources, true);
 
     // Generate the Link headers 

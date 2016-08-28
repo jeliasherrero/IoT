@@ -50,6 +50,7 @@ exports.modelToResources = function(subModel, withValue) {
     var resource = {};
     resource.id = key;
     resource.name = val['name'];
+    resource.data = val['values'];
     if(withValue) resource.values = val.data[val.data.length-1];
     resources.push(resource);
   });

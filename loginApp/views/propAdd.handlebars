@@ -1,0 +1,30 @@
+<h2 class="lead">Añadir un nuevo sensor</h2>
+{{#if errors}}
+	{{#each errors}}
+		<div class="alert alert-danger">{{msg}} </div>
+	{{/each}}
+{{/if}}
+<form method="post" action="/properties/add">
+	<div class="form-group">
+		<label>Nombre</label>
+		<input type="text" class="form-control" name="name" placeholder="Nombre del sensor">
+	</div>
+	<div class="form-group">
+		<label>Descripción</label>
+		<input type="text" class="form-control" name="username" placeholder="Escribe una pequeña descripción">
+	</div>
+	<div class="form-group">
+		<label>Unidades</label>
+		<input type="text" class="form-control" name="email" placeholder="Especifica las unidades en las que trabaja el sensor">
+	</div>
+	<div class="form-group">
+		<label>GPIO</label>
+		<input type="text" class="form-control" name="password" placeholder="Especifica el número de puerto en donde has cableado la salida del sensor">
+	</div>
+	<div class="form-group">
+		<label>Tags</label>
+		<input type="text" class="form-control" name="password2" placeholder="Escribe palabras clave que identifiquen el tipo de recurso añadido (sensor, humedad, etc)">
+	</div>
+	<button type="submit" class="btn btn-default">Añadir</button>
+</form>
+

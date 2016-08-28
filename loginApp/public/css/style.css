@@ -31,7 +31,7 @@ body {
 }
 body {
   color: #fff;
-  text-align: center;
+  /*text-align: center;*/
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
@@ -55,7 +55,7 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  padding: 0px;
 }
 
 
@@ -110,7 +110,7 @@ body {
  */
 
 .cover {
-  padding: 0 20px;
+  padding: 100px 0px;
 }
 .cover .btn-lg {
   padding: 10px 20px;
@@ -160,4 +160,13 @@ body {
   .cover-container {
     width: 700px;
   }
+}
+
+.list-group-item {
+    background-color: #111;
+    border: 1px solid #ddd;
+    display: block;
+    margin-bottom: -1px;
+    padding: 10px 15px;
+    position: relative;
 }

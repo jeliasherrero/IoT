@@ -40,10 +40,10 @@
       },
       "display": {
           "name": "LCD20x4",
-	  "cursorX": 0,
-	  "cursorY": 0,
+	       "cursorX": 0,
+	       "cursorY": 0,
           "value": "Welcome",
-	  "onOff": "true"
+	       "onOff": "true"
       }
     }
   }

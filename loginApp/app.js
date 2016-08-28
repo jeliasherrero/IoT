@@ -72,7 +72,7 @@ app.use(function (req, res, next) {
   res.locals.error = req.flash('error');
   res.locals.user = req.user || null;
   res.locals.url = req.url;
-  console.log(req.url);
+  res.locals.serverRunning = false;
   next();
 });
 
